@@ -1,105 +1,20 @@
-/* --- Global Document Setup --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* --- Keep your exact Navigation & Home CSS the same at the top --- */
 
-body {
-    background-color: #fceecb; /* Your cream background color */
-    color: #212529;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* --- Horizontal Navigation Bar --- */
-header {
-    background-color: #1a1a24;
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.logo {
-    color: #ffcc00;
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s ease;
-    padding-bottom: 4px;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #ffcc00;
-    border-bottom: 2px solid #ffcc00;
-}
-
-/* --- Home Layout Styles --- */
-.hero-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-}
-
-h2 {
-    color: red;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.image-container img {
-    width: 400px;
-    border: purple 2px dotted;
-    border-radius: 8px;
-    transition: border 0.2s ease;
-    margin-bottom: 1.5rem;
-}
-
-.image-container img:hover {
-    border: 4px solid green;
-}
-
-/* --- Clean Raw App View Layout --- */
+/* Centers your raw app frames side-by-side cleanly */
 .apps-viewer {
     display: flex;
-    flex-direction: column; /* Stacks the apps vertically exactly like your layout */
-    gap: 2rem;
+    gap: 4rem;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     padding: 3rem 2rem;
-    width: 100%;
+    min-height: calc(100vh - 70px);
 }
 
+/* Individual iframe settings to ensure click transmission works */
 .apps-viewer iframe {
     display: block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Drop shadow edge definition */
     border-radius: 8px;
-    pointer-events: auto; /* Forces interactive user touch mouse-clicks to work */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle edge shading so they look clean against the cream background */
+    pointer-events: auto; /* Explicitly forces the browser to allow clicking inside the frames */
 }
