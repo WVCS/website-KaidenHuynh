@@ -1,4 +1,4 @@
-/* --- Global Setup --- */
+/* --- Global Document Setup --- */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     flex-direction: column;
 }
 
-/* --- Horizontal Navigation Bar Setup --- */
+/* --- Horizontal Navigation Bar --- */
 header {
     background-color: #1a1a24;
     padding: 1rem 2rem;
@@ -58,7 +58,7 @@ header {
     border-bottom: 2px solid #ffcc00;
 }
 
-/* --- Home Layout Content --- */
+/* --- Home Layout Styles --- */
 .hero-container {
     flex: 1;
     display: flex;
@@ -74,7 +74,6 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* Basketball Image Properties */
 .image-container img {
     width: 400px;
     border: purple 2px dotted;
@@ -83,25 +82,24 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* Your Green Hover Effect */
 .image-container img:hover {
     border: 4px solid green;
 }
 
-/* --- Decoration-Free Projects Layout --- */
+/* --- Clean Raw App View Layout --- */
 .apps-viewer {
     display: flex;
-    gap: 4rem;
+    flex-direction: column; /* Stacks the apps vertically exactly like your layout */
+    gap: 2rem;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     padding: 3rem 2rem;
-    min-height: calc(100vh - 70px);
+    width: 100%;
 }
 
 .apps-viewer iframe {
     display: block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slight shadow to show frame edge */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Drop shadow edge definition */
     border-radius: 8px;
-    pointer-events: auto; /* Explicitly forces browser to accept mouse clicks */
+    pointer-events: auto; /* Forces interactive user touch mouse-clicks to work */
 }
