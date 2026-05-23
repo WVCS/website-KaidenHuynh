@@ -70,4 +70,38 @@ header {
 
 h2 {
     color: red;
-    font-size: 2.5
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Basketball Image Properties */
+.image-container img {
+    width: 400px;
+    border: purple 2px dotted;
+    border-radius: 8px;
+    transition: border 0.2s ease;
+    margin-bottom: 1.5rem;
+}
+
+/* Your Green Hover Effect */
+.image-container img:hover {
+    border: 4px solid green;
+}
+
+/* --- Decoration-Free Projects Layout --- */
+.apps-viewer {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 70px);
+}
+
+.apps-viewer iframe {
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slight shadow to show frame edge */
+    border-radius: 8px;
+    pointer-events: auto; /* Explicitly forces browser to accept mouse clicks */
+}
