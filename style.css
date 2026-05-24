@@ -1,4 +1,4 @@
-/* --- Global Setup --- */
+/* --- Global Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #fceecb; /* Your cream background color */
+    background-color: #fceecb; /* Cream background */
     color: #212529;
     min-height: 100vh;
     display: flex;
@@ -72,7 +72,6 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* Basketball Image Properties */
 .image-container img {
     width: 400px;
     border: purple 2px dotted;
@@ -81,12 +80,11 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
-/* Your Green Hover Effect */
 .image-container img:hover {
     border: 4px solid green;
 }
 
-/* --- Decoration-Free Projects Layout --- */
+/* --- Clean Projects App Layout --- */
 .apps-viewer {
     display: flex;
     gap: 4rem;
@@ -99,7 +97,7 @@ h2 {
 
 .apps-viewer iframe {
     display: block;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sleek shadow boundary */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    pointer-events: auto; /* Forces interactive game clicks to work smoothly */
+    pointer-events: auto;
 }
