@@ -1,6 +1,92 @@
-/* --- Keep your exact Navigation & Home CSS the same at the top --- */
+/* --- Global Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-/* Centers your raw app frames side-by-side cleanly */
+body {
+    background-color: #fceecb; /* Cream background color */
+    color: #212529;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Horizontal Navigation Bar Setup --- */
+header {
+    background-color: #1a1a24;
+    padding: 1rem 2rem;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #ffcc00;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding-bottom: 4px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+}
+
+/* --- Home Layout Content --- */
+.hero-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Basketball Image Properties */
+.image-container img {
+    width: 400px;
+    border: purple 2px dotted;
+    border-radius: 8px;
+    transition: border 0.2s ease;
+    margin-bottom: 1.5rem;
+}
+
+/* Green Hover Effect */
+.image-container img:hover {
+    border: 4px solid green;
+}
+
+/* --- Clean Projects App Layout (No Cards, No Obstructions) --- */
 .apps-viewer {
     display: flex;
     gap: 4rem;
@@ -8,13 +94,12 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 3rem 2rem;
-    min-height: calc(100vh - 70px);
+    flex: 1;
 }
 
-/* Individual iframe settings to ensure click transmission works */
 .apps-viewer iframe {
     display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle edge shading so they look clean against the cream background */
-    pointer-events: auto; /* Explicitly forces the browser to allow clicking inside the frames */
+    pointer-events: auto; /* Ensures code.org buttons are clickable */
 }
