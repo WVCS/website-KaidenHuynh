@@ -1,4 +1,4 @@
-/* --- Global Document Reset --- */
+/* --- Global Setup --- */
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +7,14 @@
 }
 
 body {
-    background-color: #fceecb; /* Cream Background */
+    background-color: #fceecb; /* Your cream background color */
     color: #212529;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* --- Horizontal Navigation Bar --- */
+/* --- Horizontal Navigation Bar Setup --- */
 header {
     background-color: #1a1a24;
     padding: 1rem 2rem;
@@ -72,6 +72,7 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+/* Basketball Image Properties */
 .image-container img {
     width: 400px;
     border: purple 2px dotted;
@@ -80,15 +81,25 @@ h2 {
     margin-bottom: 1.5rem;
 }
 
+/* Your Green Hover Effect */
 .image-container img:hover {
     border: 4px solid green;
 }
 
-/* --- Project Viewer Display Window --- */
+/* --- Decoration-Free Projects Layout --- */
 .apps-viewer {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem 2rem;
     flex: 1;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+}
+
+.apps-viewer iframe {
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sleek shadow boundary */
+    border-radius: 8px;
+    pointer-events: auto; /* Forces interactive game clicks to work smoothly */
 }
